@@ -1,17 +1,17 @@
 import express from "express";
 import dotenv from "dotenv";
-import { connectDatabase } from "./lib/db.js";
-import authRouter from "./routes/auth.router.js";
+import { connectDatabase } from "./src/lib/db.js";
+import authRouter from "./src/routes/auth.router.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import notesRouter from "./routes/notes.router.js";
+import notesRouter from "./src/routes/notes.router.js";
 
 dotenv.config();
 
 const app = express();
 
 const allowedOrigins = [
-  // 'https://yourfrontenddomain.com',
+  "https://notes-app-frontend-umber-five.vercel.app/",
   "http://localhost:5173", // for development
 ];
 
